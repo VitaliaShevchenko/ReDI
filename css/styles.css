@@ -1,0 +1,106 @@
+body {
+  background-color: rgb(240, 243, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-bottom: 0;
+  height: 80px;
+}
+
+li {
+  list-style-type: none;
+  float: left;
+  margin: 0 20px;
+  padding: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #dbd2ca;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(33, 25, 81, 0.5);
+  width: 700px;
+  height: 600px;
+}
+
+.container-text {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.start-button,
+.move-on-button
+{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color:	rgb(232, 199, 82);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.move-on-button {
+  bottom: 1%;
+  padding: 5px 14px;
+}
+
+.vegetables-container {
+  border: none;
+  box-shadow: none;
+}
+
+.vegetable-button,
+.fruit-button,
+.meat-and-fish-button,
+.spice-button,
+.dairy-button,
+.other-button,
+.dairy-button {
+  margin-top: 12px;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(190, 215, 220);
+  cursor: pointer;
+}
+
+.vegetable-button:hover,
+.fruit-button:hover,
+.meat-and-fish-button:hover,
+.spice-button:hover,
+.dairy-button:hover,
+.other-button:hover {
+  box-shadow: 0 0 3px rgb(137, 93, 93, 0.5);
+  background-color: rgb(76, 205, 153);
+}
+
+.js-toggled-button,
+.js-toggled-button:hover
+{
+  background-color: #12a77a	;
+  box-sizing: border-box;
+  color: beige;
+  font-weight: bold;
+}
+
+.go-to-recipes-link,
+.go-to-recipes-link:hover {
+  color: white;
+  cursor: pointer;
+}
