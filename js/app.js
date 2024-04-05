@@ -5,7 +5,7 @@ const firstRowContainer = document.createElement("div"); //variable for creation
 let buttonIndex = 0; //the variable which will conrain the index of toggled buttons
 let toggledButtons = JSON.parse(localStorage.getItem("toggledButtons")) || []; //the array of toggled buttons
 
-const vegetables = [
+const vegetablesAndGreens = [
   "Potato",
   "Tomato",
   "Onion",
@@ -26,7 +26,7 @@ const vegetables = [
   "Cabbage",
   "Zucchini",
   "Eggplant",
-  "Pumpkin",
+  "Basil",
   "Asparagus",
   "Artichoke",
   "Mushroom",
@@ -178,6 +178,7 @@ const otherIngridients = [
   "Wine",
   "Beer",
   "Honey",
+  "Quinoa"
 ];
 
 function createButtonsGrid(category) {
@@ -205,7 +206,7 @@ function createButtonsGrid(category) {
     // Set button text to property value
     button.textContent = property;
     // Add classes to the button
-    if (category == vegetables) {
+    if (category == vegetablesAndGreens) {
       button.classList.add("vegetable-button", "js-vegetable-button");
     } else if (category == fruits) {
       button.classList.add("fruit-button", "js-fruit-button");
@@ -255,19 +256,14 @@ function addToggleButtonFunctionality(categorySelector) {
   });
 }
 
-function clearLocalStorage() {
+document.addEventListener("DOMContentLoaded", function () {
   localStorage.removeItem("toggledButtons");
-}
+});
 
 firstRowContainer.classList.add("row");
 buttonsContainer.appendChild(firstRowContainer);
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Your code here
-  clearLocalStorage();
-});
-
-createButtonsGrid(vegetables);
+createButtonsGrid(vegetablesAndGreens);
 addToggleButtonFunctionality(".js-vegetable-button");
 
 //The block of code for handling the move on button
