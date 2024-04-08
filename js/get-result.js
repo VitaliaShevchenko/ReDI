@@ -1,5 +1,6 @@
 const recipeContainer = document.querySelector(".js-recipe-results");
 let checkedIngredients = JSON.parse(localStorage.getItem("toggledButtons"));
+const randomNumber = Math.floor(Math.random() * 103);
 
 class Recipe {
   constructor(name, ingredients, instructions) {
@@ -544,9 +545,11 @@ recipes.forEach(recipe => {
     console.log(`${recipe.name}: No`);
   }
 
-  if (displayedRecipes = 1) {
+  if (displayedRecipes == 1) {
     return;
   }
+
+  
 });
 
-console.log(checkedIngredients)
+console.log(recipes[randomNumber]);
