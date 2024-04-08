@@ -18,7 +18,7 @@ const vegetablesAndGreens = [
   "Broccoli",
   "Cauliflower",
   "Peas",
-  "Beans",
+  "Green beans",
   "Beetroot",
   "Radish",
   "Celery",
@@ -28,7 +28,7 @@ const vegetablesAndGreens = [
   "Eggplant",
   "Basil",
   "Asparagus",
-  "Artichoke",
+  "Cilantro",
   "Mushroom",
   "Kale",
   "Swiss chard",
@@ -105,36 +105,15 @@ const meatAndFish = [
 ];
 
 const spices = [
-  "Anise",
-  "Smoked paprika",
-  "Cinnamon",
-  "Coriander",
-  "Cumin",
-  "Fennel seeds",
+  "Salt",
+  "Pepper",
   "Ginger",
-  "Juniper berries",
-  "Laurel",
-  "Lovage",
-  "Marjoram",
-  "Mustard seeds",
-  "Nutmeg",
   "Paprika",
   "Parsley",
-  "Pepper",
   "Rosemary",
-  "Sage",
-  "Savory",
-  "Star anise",
-  "Tarragon",
+  "Salt",
   "Thyme",
-  "Turmeric",
-  "Allspice",
-  "Cardamom",
-  "Chili powder",
-  "Cloves",
-  "Curry powder",
-  "Garlic powder",
-  "Vanilla",
+  "Garlic powder"
 ];
 
 const dairy = [
@@ -156,29 +135,37 @@ const dairy = [
   "Camembert cheese",
   "Parmesan cheese",
   "Gorgonzola",
+  "Mozzarella cheese",
+  "Goat cheese",
 ];
 
 const otherIngridients = [
   "Olive oil",
   "Vegetable oil",
-  "Sesame seeds oil",
+  "Sesame oil",
   "Flour",
   "Corn flour",
   "Baking powder",
   "Yeast",
   "Rice",
-  "Noodles",
+  "Pasta",
   "Spaghetti",
   "Bulgur",
   "Glass noodles",
   "Soy sauce",
   "Starch",
   "Sesame seeds",
-  "Nuts",
-  "Wine",
+  "Almonds",
+  "Red wine",
   "Beer",
   "Honey",
-  "Quinoa"
+  "Quinoa",
+  "Vinegar",
+  "Mustard",
+  "Balsamic Vinegar",
+  "Walnuts",
+  "Lemon juice",
+  "Lime juice"
 ];
 
 function createButtonsGrid(category) {
@@ -230,6 +217,10 @@ function createButtonsGrid(category) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  //localStorage.removeItem("toggledButtons");
+  toggledButtons = [];
+});
 // The bock of code which toggles the buttons and saves the toggled buttons into an array and localStorage
 function addToggleButtonFunctionality(categorySelector) {
   const buttons = document.querySelectorAll(categorySelector);
@@ -241,7 +232,12 @@ function addToggleButtonFunctionality(categorySelector) {
 
       if (!clickedButton.classList.contains("js-toggled-button")) {
         clickedButton.classList.add("js-toggled-button");
-        toggledButtons.push(buttonText); // Add the text to the toggledButtons array
+        if (toggledButtons.includes(buttonText)) {
+          return;
+        } else {
+          toggledButtons.push(buttonText); // Add the text to the toggledButtons array
+        }
+        
       } else {
         const index = toggledButtons.indexOf(buttonText);
         clickedButton.classList.remove("js-toggled-button");
@@ -255,10 +251,6 @@ function addToggleButtonFunctionality(categorySelector) {
     });
   });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  localStorage.removeItem("toggledButtons");
-});
 
 firstRowContainer.classList.add("row");
 buttonsContainer.appendChild(firstRowContainer);

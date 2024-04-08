@@ -1,0 +1,31 @@
+.recipe-results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #dbd2ca;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(33, 25, 81, 0.5);
+  width: 700px;
+  height: 600px;
+}
+
+.recipe-name {
+  font-size: 3em;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.recipe-ingridients {
+  font-size: 2em;
+  color: green;
+  text-align: center;
+}
+
+.recipe-instructions {
+  font-size: 1.5em;
+  color: gray;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
