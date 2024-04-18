@@ -1,3 +1,5 @@
+import { vegetablesAndGreens, fruit, meatAndFish, spices, dairy, otherIngridients } from "./data/ingridients.js";
+
 const mainContainer = document.querySelector(".js-main-container"); //main content container
 const containerText = document.querySelector(".js-container-text"); //container for the text on the top of the main container
 const buttonsContainer = document.querySelector(".js-buttons-container"); //container for the buttons inside the main container
@@ -5,168 +7,6 @@ const firstRowContainer = document.createElement("div"); //variable for creation
 let buttonIndex = 0; //the variable which will conrain the index of toggled buttons
 let toggledButtons = JSON.parse(localStorage.getItem("toggledButtons")) || []; //the array of toggled buttons
 
-const vegetablesAndGreens = [
-  "Potato",
-  "Tomato",
-  "Onion",
-  "Carrot",
-  "Cucumber",
-  "Lettuce",
-  "Bell pepper",
-  "Garlic",
-  "Spinach",
-  "Broccoli",
-  "Cauliflower",
-  "Peas",
-  "Green beans",
-  "Beetroot",
-  "Radish",
-  "Celery",
-  "Leek",
-  "Cabbage",
-  "Zucchini",
-  "Eggplant",
-  "Basil",
-  "Asparagus",
-  "Cilantro",
-  "Mushroom",
-  "Kale",
-  "Swiss chard",
-  "Turnip",
-  "Fennel",
-  "Parsnip",
-  "Kohlrabi",
-];
-
-const fruits = [
-  "Apple",
-  "Banana",
-  "Orange",
-  "Strawberry",
-  "Cherry",
-  "Pear",
-  "Grape",
-  "Peach",
-  "Plum",
-  "Raspberry",
-  "Blueberry",
-  "Lemon",
-  "Kiwi",
-  "Pineapple",
-  "Mango",
-  "Watermelon",
-  "Cantaloupe",
-  "Honeydew",
-  "Papaya",
-  "Apricot",
-  "Grapefruit",
-  "Avocado",
-  "Passionfruit",
-  "Fig",
-  "Coconut",
-  "Lime",
-  "Blackberry",
-  "Cranberry",
-  "Mandarin",
-  "Pomegranate",
-];
-
-const meatAndFish = [
-  "Beef steak",
-  "Pork chops",
-  "Chicken breast",
-  "Salmon fillet",
-  "Trout",
-  "Chichen wings",
-  "Cod fillet",
-  "Lamb chops",
-  "Duck breast",
-  "Turkey breast",
-  "Pork belly",
-  "Beef tenderloin",
-  "Chicken legs",
-  "Pork loin",
-  "Haddock fillet",
-  "Halibut steak",
-  "Veal cutlet",
-  "Mackerel fillet",
-  "Swordfish steak",
-  "Carp",
-  "chicken thigh fillets",
-  "Squid",
-  "Mussels",
-  "Crab legs",
-  "Shrimp",
-  "Clams",
-  "Anchovies",
-  "Minced mixed meat",
-  "Pork minced meat",
-  "Minced beef",
-];
-
-const spices = [
-  "Salt",
-  "Pepper",
-  "Ginger",
-  "Paprika",
-  "Parsley",
-  "Rosemary",
-  "Salt",
-  "Thyme",
-  "Garlic powder"
-];
-
-const dairy = [
-  "Milk",
-  "Butter",
-  "Yogurt",
-  "Cream",
-  "Sour cream",
-  "Quark",
-  "Cottage cheese",
-  "Kefir",
-  "Whipped cream",
-  "Mascarpone",
-  "Condensed milk",
-  "Cream cheese",
-  "Cheddar cheese",
-  "Gouda cheese",
-  "Emmental cheese",
-  "Camembert cheese",
-  "Parmesan cheese",
-  "Gorgonzola",
-  "Mozzarella cheese",
-  "Goat cheese",
-];
-
-const otherIngridients = [
-  "Olive oil",
-  "Vegetable oil",
-  "Sesame oil",
-  "Flour",
-  "Corn flour",
-  "Baking powder",
-  "Yeast",
-  "Rice",
-  "Pasta",
-  "Spaghetti",
-  "Bulgur",
-  "Glass noodles",
-  "Soy sauce",
-  "Starch",
-  "Sesame seeds",
-  "Almonds",
-  "Red wine",
-  "Beer",
-  "Honey",
-  "Quinoa",
-  "Vinegar",
-  "Mustard",
-  "Balsamic Vinegar",
-  "Walnuts",
-  "Lemon juice",
-  "Lime juice"
-];
 
 function createButtonsGrid(category) {
   category.forEach((property, index) => {
@@ -195,7 +35,7 @@ function createButtonsGrid(category) {
     // Add classes to the button
     if (category == vegetablesAndGreens) {
       button.classList.add("vegetable-button", "js-vegetable-button");
-    } else if (category == fruits) {
+    } else if (category == fruit) {
       button.classList.add("fruit-button", "js-fruit-button");
     } else if (category == meatAndFish) {
       button.classList.add("meat-and-fish-button", "js-meat-and-fish-button");
@@ -265,7 +105,7 @@ document.addEventListener("click", (event) => {
     // Handle click on moveToFruitButton
     containerText.innerHTML = `<p>Well done! Now tell me, what fruit do you have at home?</p>`;
     buttonsContainer.innerHTML = "";
-    createButtonsGrid(fruits);
+    createButtonsGrid(fruit);
     addToggleButtonFunctionality(".js-fruit-button");
     target.innerHTML = `Check meat/fish`;
     target.classList.add("js-check-meat-and-fish-btn");

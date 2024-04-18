@@ -104,3 +104,31 @@ a {
   color: white;
   cursor: pointer;
 }
+
+@media (min-width: 300px) and (max-width: 767.98px) { 
+  .vegetable-button,
+  .fruit-button,
+  .meat-and-fish-button,
+  .spice-button,
+  .dairy-button,
+  .other-button,
+  .dairy-button {
+    width: 45%;
+    margin-top: 5px;
+  }
+  .container {
+    box-shadow: none;
+    border: none;
+    overflow: scroll;
+    margin-bottom: 50px;
+    height: 100%;
+    width: 100%;
+  }
+  .container-text {
+    width: 100%;
+  }
+  .move-on-button {
+    position: fixed;
+    bottom: 1px;
+  }
+}

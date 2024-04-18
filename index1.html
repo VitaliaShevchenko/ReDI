@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #one, #two, #three {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #one {
+            width: 200px;
+        }
+
+        .outer {
+            padding: 20px;
+            background-color: #eee;
+        }
+        .inner {
+            padding: 10px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<h1>Event Handlers</h1>
+<h3>Inlined event handler:</h3>
+<button onclick="console.log('click the button to see this log in the console')">Click Me #1</button>
+
+<h3> Inlined event handler function:</h3>
+<button onclick="handleClickButton()">Click Me #2</button>
+
+<h3>Programmatically set event handler:</h3>
+<button id="button3">Click Me #3</button>
+
+<h1>Event Object</h1>
+<button id="button4">Click Me #4</button>
+
+<h1>Event Bubbling</h1>
+<div id="one" onclick="alert('one')">DIV#1
+    <div id="two" onclick="alert('two')">DIV#2
+        <div id="three" onclick="alert('three')">DIV#3</div>
+    </div>
+</div>
+
+<h1>Event Target vs CurrentTarget</h1>
+<div class="outer" id="outer">
+    Outer
+    <div class="inner" id="inner">
+        Inner
+    </div>
+</div>
+
+<script>
+    function handleClickButton() {
+        console.log("button #2 was clicked");
+    }
+
+    // Event Bubbling
+    const button3 = document.getElementById("button3")
+    button3.addEventListener("click", function () {
+        console.log("button #3 was clicked");
+    })
+    button3.onclick = () => console.log('hello');
+    const button4 = document.getElementById("button4")
+    button4.addEventListener("click", function (event) {
+        console.log(event);
+    })
+
+    // Event Target vs CurrentTarget
+    const handleClickDiv = (eventSourceElement) => (event) => {
+        // console.log("Target:", event.target.id);
+        // console.log("Current Target:", event.currentTarget.id);
+        console.log(`Registered click on element: ${eventSourceElement}. Target: ${event.target.id}, Current Target: ${event.currentTarget.id}`);
+    }
+
+    const outer = document.getElementById('outer');
+    const inner = document.getElementById('inner');
+
+    outer.addEventListener('click', handleClickDiv('outer'));
+    inner.addEventListener('click', handleClickDiv('inner'));
+
+</script>
+</body>
+</html>
