@@ -13,21 +13,16 @@ export const vegetablesAndGreens = [
   "Peas",//++
   "Green beans",//+
   "Beetroot",//++
-  "Radish",
   "Celery",//+
   "Leek",//+
   "Cabbage",//+
   "Zucchini",//++++
   "Eggplant",//++
   "Basil",//+++++
-  "Asparagus",//+
   "Cilantro",//+++
   "Mushroom",//+++
   "Kale",//++
   "Swiss chard",//+
-  "Turnip",//+
-  "Fennel",//+
-  "Parsnip",
   "Kohlrabi",//+
   "Rucola",//+++
   "Red onion",//++++++
@@ -55,17 +50,14 @@ export const fruit = [
   "Watermelon",//+
   "Melon",//++
   "Papaya",//+
-  "Apricot",
   "Grapefruit",//+
   "Avocado",//+
   "Passionfruit",//+
   "Fig",//+
   "Coconut",
   "Lime",//+++++
-  "Blackberry",
   "Cranberry",//+
   "Mandarin",//+
-  "Pomegranate",
 ];
 
 export const meatAndFish = [
@@ -94,8 +86,6 @@ export const meatAndFish = [
   "Mussels",//+
   "Crab legs",//++
   "Shrimp",//+
-  "Clams",//+
-  "Anchovies",//+
   "Minced mixed meat",//+
   "Pork minced meat",//+
   "Ground beef",//+
@@ -135,13 +125,11 @@ export const dairy = [
   "Sour cream",
   "Quark",//+
   "Cottage cheese",//+
-  "Kefir",
   "Whipped cream",//+
   "Mascarpone",//+
   "Condensed milk",//+
   "Cream cheese",//++
   "Cheddar cheese",//+
-  "Gouda cheese",
   "Emmental cheese",//+
   "Camembert cheese",//+
   "Parmesan cheese",//+++++++
@@ -155,22 +143,16 @@ export const dairy = [
 export const otherIngridients = [
   "Olive oil",//+++++++++++++++++++++++++++
   "Vegetable oil",//+
-  "Sesame oil",
   "Flour",//+++
-  "Corn flour",
   "Baking powder",//+
-  "Yeast",
   "Rice",//++++
   "Pasta",//+++++
   "Spaghetti",//+
   "Bulgur",//+
-  "Glass noodles",
   "Soy sauce",//+++++
-  "Starch",
   "Sesame seeds",//++
   "Almonds",//++
   "Red wine",//++
-  "Beer",
   "Honey",//+++++
   "Quinoa",//++
   "Vinegar",//+
@@ -188,7 +170,5 @@ export const otherIngridients = [
   "Dijon mustard",//+
   "Oats",//++
   "Sugar",//++++
-  "Apricot preserves",//+
-  "Pistachio",//+
   "White wine"//++
 ];

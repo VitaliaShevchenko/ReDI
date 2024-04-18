@@ -219,11 +219,6 @@ export const recipes = [
     "Sauté diced onions, minced garlic, and grated ginger in olive oil. Add sliced carrots and vegetable broth. Simmer until carrots are soft. Blend until smooth."
   ),
   new Recipe(
-    "Garlic Parmesan Roasted Asparagus",
-    ["Asparagus", "Olive oil", "Garlic", "Parmesan cheese"],
-    "Toss asparagus spears with minced garlic, grated Parmesan cheese, and olive oil. Roast until tender-crisp."
-  ),
-  new Recipe(
     "Simple Eggplant Parmesan",
     ["Eggplant", "Tomato sauce", "Mozzarella cheese", "Parmesan cheese", "Bread"],
     "Slice eggplant and coat in bread crumbs. Fry until golden brown. Layer in a baking dish with tomato sauce, mozzarella cheese, and grated Parmesan cheese. Bake until bubbly and golden."
@@ -259,19 +254,9 @@ export const recipes = [
     "Sauté chopped Swiss chard, onions, and minced garlic in olive oil until wilted. Beat eggs and crumbled feta cheese together. Pour over the Swiss chard mixture in a pan. Cook until set. Season with salt and pepper."
   ),
   new Recipe(
-    "Turnip and Carrot Mash",
-    ["Turnip", "Carrot", "Butter", "Milk", "Salt", "Pepper"],
-    "Peel and chop turnips and carrots. Boil until tender. Drain and mash with butter and milk until smooth. Season with salt and pepper."
-  ),
-  new Recipe(
     "Kale and Quinoa Salad",
     ["Kale", "Quinoa", "Cherry tomato", "Cucumber", "Red onion", "Lemon", "Olive oil", "Salt", "Pepper"],
     "Cook quinoa according to package instructions. Massage kale with lemon juice and olive oil until softened. Toss kale with cooked quinoa, halved cherry tomatoes, sliced cucumber, and diced red onion. Season with salt and pepper."
-  ),
-  new Recipe(
-    "Fennel and Orange Salad",
-    ["Fennel", "Orange", "Red onion", "Olive oil", "Lemon", "Salt", "Pepper"],
-    "Slice fennel thinly and segment oranges. Thinly slice red onions. Toss together with olive oil, lemon juice, salt, and pepper."
   ),
   new Recipe(
     "Kohlrabi and Apple Slaw",
@@ -364,16 +349,6 @@ export const recipes = [
     "Cube watermelon and crumble feta cheese. Chop mint leaves. Toss together with balsamic vinegar, olive oil, salt, and pepper."
   ),
   new Recipe(
-    "Apricot Glazed Chicken",
-    ["Chicken breast", "Apricot preserves", "Soy sauce", "Garlic", "Ginger", "Olive oil", "Salt", "Pepper"],
-    "Marinate chicken breast in a mixture of apricot preserves, soy sauce, minced garlic, minced ginger, olive oil, salt, and pepper. Grill or bake until cooked through."
-  ),
-  new Recipe(
-    "Grapefruit and Avocado Salad",
-    ["Grapefruit", "Avocado", "Rucola", "Red onion", "Pistachio", "Lemon", "Olive oil", "Honey", "Salt", "Pepper"],
-    "Segment grapefruit and slice avocado. Toss together with arugula, thinly sliced red onion, and chopped pistachios. Dress with lemon juice, olive oil, honey, salt, and pepper."
-  ),
-  new Recipe(
     "Passionfruit Sorbet",
     ["Passionfruit", "Sugar", "Lemon"],
     "Combine passionfruit pulp, sugar, water, and lemon juice in a saucepan. Bring to a simmer, then cool. Freeze in an ice cream maker according to manufacturer's instructions."
@@ -464,11 +439,6 @@ export const recipes = [
     "Mix mustard seeds, honey, and garlic powder. Brush over pork chops. Season with salt and pepper. Grill or bake until cooked through."
   ),
   new Recipe(
-    "Clams Pasta with White Wine Sauce",
-    ["Clams", "Pasta", "White wine", "Garlic powder", "Parsley", "Olive oil", "Salt", "Pepper"],
-    "Cook pasta according to package instructions. Sauté minced garlic in olive oil. Add clams and white wine. Cover and steam until clams open. Toss with cooked pasta, chopped parsley, salt, and pepper."
-  ),
-  new Recipe(
     "Cherry Fig Salad with Cottage Cheese Dressing",
     ["Cherry", "Fig", "Cottage cheese", "Honey", "Lemon"],
     "Slice cherries and figs. Mix cottage cheese with honey and lemon juice to make a dressing. Toss fruits with dressing and serve."
@@ -482,11 +452,6 @@ export const recipes = [
     "Crab Legs with Garlic Butter",
     ["Crab legs", "Butter", "Lemon", "Parsley", "Garlic powder"],
     "Steam or boil crab legs until heated through. Serve with melted butter mixed with garlic powder, lemon juice, and chopped parsley."
-  ),
-  new Recipe(
-    "Anchovy Minced Meat Pasta",
-    ["Minced mixed meat", "Anchovies", "Garlic", "Tomato sauce", "Pasta"],
-    "Sauté minced mixed meat with chopped anchovies and garlic. Add tomato sauce and simmer. Serve over cooked pasta."
   ),
   new Recipe(
     "Pork Meatballs with Marjoram Sauce",

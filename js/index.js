@@ -146,6 +146,5 @@ document.addEventListener("click", (event) => {
     target.innerHTML = `<a href="recipe-results.html" class="go-to-recipes-link js-go-to-recipes-link">See the Recipes</a>`;
     target.classList.add("js-see-result");
     target.classList.remove(".js-go-to-others-button");
-  } else if (target.matches(".js-see-result")) {
-  }
+  } 
 });
