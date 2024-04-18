@@ -1,14 +1,7 @@
 const recipeContainer = document.querySelector(".js-recipe-results");
 let checkedIngredients = JSON.parse(localStorage.getItem("toggledButtons"));
-const randomNumber = Math.floor(Math.random() * 103);
-
 import {recipes} from "./data/recipes.js";
 let displayedRecipes;
-
-function getRandomRecipe(array) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-}
 
 recipes.forEach(recipe => {
   displayedRecipes = 0;
