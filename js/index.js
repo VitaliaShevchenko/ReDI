@@ -30,9 +30,9 @@ function createButtonsGrid(category) {
       "align-items-center"
     );
 
-    // Set button text to property value
+    // setting button text to property value
     button.textContent = property;
-    // Add classes to the button
+    // add classes to the button
     if (category == vegetablesAndGreens) {
       button.classList.add("vegetable-button", "js-vegetable-button");
     } else if (category == fruit) {
@@ -57,11 +57,12 @@ function createButtonsGrid(category) {
   });
 }
 
+
+//clear the local storage if the page is reloaded or loaded
 document.addEventListener("DOMContentLoaded", function () {
-  //localStorage.removeItem("toggledButtons");
   toggledButtons = [];
 });
-// The bock of code which toggles the buttons and saves the toggled buttons into an array and localStorage
+// The block of code which toggles the buttons and saves the toggled buttons into an array and localStorage
 function addToggleButtonFunctionality(categorySelector) {
   const buttons = document.querySelectorAll(categorySelector);
 
@@ -73,20 +74,19 @@ function addToggleButtonFunctionality(categorySelector) {
       if (!clickedButton.classList.contains("js-toggled-button")) {
         clickedButton.classList.add("js-toggled-button");
         if (toggledButtons.includes(buttonText)) {
-          return;
+          return;  //if the text of the button already in the toggledButtons array - stops execution
         } else {
           toggledButtons.push(buttonText); // Add the text to the toggledButtons array
         }
-        
       } else {
-        const index = toggledButtons.indexOf(buttonText);
+        const index = toggledButtons.indexOf(buttonText); // checks the index of the button text in toggled buttons array
         clickedButton.classList.remove("js-toggled-button");
         if (index !== -1) {
-          toggledButtons.splice(index, 1); // Remove the text from the toggledButtons array
+          toggledButtons.splice(index, 1); // Remove the text from the toggledButtons array 
         }
       }
 
-      localStorage.setItem("toggledButtons", JSON.stringify(toggledButtons));
+      localStorage.setItem("toggledButtons", JSON.stringify(toggledButtons)); // saves the toggled buttons array in the local storage
       console.log(toggledButtons);
     });
   });
